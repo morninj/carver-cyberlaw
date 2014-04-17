@@ -32,3 +32,14 @@
     {0em}                   % Separator
     {}                      % Before code
 \titlespacing{\subsection}{0pt}{0pt}{-\parskip}
+
+% Make footnote references flush with the left margin
+\RequirePackage[hang,flushmargin]{footmisc} 
+
+% Add spacing between footnote reference and footnote text
+\makeatletter
+  \long\def\@makefntext#1{\leavevmode%
+    \@thefnmark\hspace{1em}\nobreak
+    \relax#1%
+  }
+\makeatother
