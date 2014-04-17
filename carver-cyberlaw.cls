@@ -26,22 +26,30 @@
     {}                      % Before code
 \titlespacing{\section}{0pt}{0pt}{-\parskip}
 \titleformat
-    {\subsection}              % Command
-    {\bfseries}             % Format
-    {\hspace{2em}\Alph{subsection}. }     % Label
-    {0em}                   % Separator
-    {}                      % Before code
+    {\subsection}                           % Command
+    {\bfseries}                             % Format
+    {\hspace{2em}\Alph{subsection}. }       % Label
+    {0em}                                   % Separator
+    {}                                      % Before code
 \titlespacing{\subsection}{0pt}{0pt}{-\parskip}
+
+% Format title and author
+\makeatletter
+    \renewcommand\@maketitle{%
+        {\centering{}\bfseries \@title \par}
+        {\centering{}\bfseries \@author \par}
+    }
+\makeatother
 
 % Make footnote references flush with the left margin
 \RequirePackage[hang,flushmargin]{footmisc} 
 
 % Add spacing between footnote reference and footnote text
 \makeatletter
-  \long\def\@makefntext#1{\leavevmode%
-    \@thefnmark\hspace{1em}\nobreak
-    \relax#1%
-  }
+    \long\def\@makefntext#1{\leavevmode%
+      \@thefnmark\hspace{1em}\nobreak
+      \relax#1%
+    }
 \makeatother
 
 % Format page numbers as Page X of Y
