@@ -13,5 +13,22 @@
 % Remove paragraph indentation
 \setlength{\parindent}{0pt}
 
-% Add vertical space between paragraphs
+% Set paragraph vertical space
 \setlength{\parskip}{\baselineskip}
+
+% Format section and subsection titles
+\RequirePackage{titlesec}
+\titleformat
+    {\section}              % Command
+    {\bfseries}             % Format
+    {\Roman{section}. }     % Label
+    {0em}                   % Separator
+    {}                      % Before code
+\titlespacing{\section}{0pt}{0pt}{-\parskip}
+\titleformat
+    {\subsection}              % Command
+    {\bfseries}             % Format
+    {\hspace{2em}\Alph{subsection}. }     % Label
+    {0em}                   % Separator
+    {}                      % Before code
+\titlespacing{\subsection}{0pt}{0pt}{-\parskip}
