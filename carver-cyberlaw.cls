@@ -3,8 +3,8 @@
 \LoadClass[12pt]{article}
 
 % Change font to Times New Roman
-\usepackage[xetex]{graphicx}
-\usepackage{fontspec,xunicode}
+\RequirePackage[xetex]{graphicx}
+\RequirePackage{fontspec,xunicode}
 \setmainfont{Times New Roman}
 
 % Margins
@@ -58,4 +58,4 @@
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt} % Remove header rule
 \fancyhead{} % Remove all header contents
-\cfoot{Page \thepage\ of \pageref{LastPage}}
+\cfoot{\small Page \thepage\ of \pageref{LastPage}}
