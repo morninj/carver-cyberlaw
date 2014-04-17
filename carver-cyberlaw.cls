@@ -1,6 +1,6 @@
 \ProvidesClass{carver-cyberlaw}
 
-\LoadClass{article}
+\LoadClass[12pt]{article}
 
 % Change font to Times New Roman
 \usepackage[xetex]{graphicx}
