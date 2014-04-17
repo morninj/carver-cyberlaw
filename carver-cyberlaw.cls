@@ -43,3 +43,11 @@
     \relax#1%
   }
 \makeatother
+
+% Format page numbers as Page X of Y
+\RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt} % Remove header rule
+\fancyhead{} % Remove all header contents
+\cfoot{Page \thepage\ of \pageref{LastPage}}
