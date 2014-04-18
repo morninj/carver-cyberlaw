@@ -2,10 +2,8 @@
 
 \LoadClass[12pt]{article}
 
-% Change font to Times New Roman
-\RequirePackage[xetex]{graphicx}
-\RequirePackage{fontspec,xunicode}
-\setmainfont{Times New Roman}
+% Change font to Times
+\usepackage{mathptmx}
 
 % Margins
 \RequirePackage[top=0.75in,bottom=0.75in,left=1.5in,right=1.5in]{geometry}
